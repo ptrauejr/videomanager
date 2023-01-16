@@ -22,6 +22,11 @@
   </div>
 
   <div>
+    <%= form.label :type, style: "display: block" %>
+    <%= form.select :dir_type, Directory.dir_types.keys.map{ |key| [key.humanize, key] }, selected: @directory.dir_type || :video %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>

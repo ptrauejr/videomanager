@@ -65,6 +65,6 @@ class DirectoriesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def directory_params
-      params.require(:directory).permit(:name, :path)
+      params.require(:directory).permit(:name, :path, :dir_type)
     end
 end

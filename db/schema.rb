@@ -16,7 +16,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_16_001459) do
     t.string "path"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "type"
+    t.integer "dir_type"
   end
 
 end
