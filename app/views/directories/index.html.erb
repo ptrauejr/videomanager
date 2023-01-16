@@ -3,12 +3,25 @@
 <h1>Directories</h1>
 
 <div id="directories">
-  <% @directories.each do |directory| %>
-    <%= render directory %>
-    <p>
-      <%= link_to "Show this directory", directory %>
-    </p>
-  <% end %>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Path</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @directories.each do |directory| %>
+        <tr>
+          <%= render directory %>
+          <td>
+            <%= link_to "Show", directory %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
 
 <%= link_to "New directory", new_directory_path %>

@@ -1,6 +1,16 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @directory %>
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Path</th>
+  </thead>
+  <tbody>
+    <tr>
+      <%= render @directory %>
+    </tr>
+  </tbody>
+</table>
 
 <div>
   <%= link_to "Edit this directory", edit_directory_path(@directory) %> |
